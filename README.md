@@ -31,23 +31,23 @@
 
 Head over to your homepage and click on your profile
 
-<img src='data/get_data/1.png' width = 200>
----
+<img src='data/get_data/1.png' width = 300/>
+
 Click on `Setting and Privacy`
 
-<img src='data/get_data/2.png' width = 200>
----
+<img src='data/get_data/2.png' width = 300/>
+
 Head over to `Data Privacy` tab
 
-<img src='data/get_data/3.png' width = 200>
----
+<img src='data/get_data/3.png' width = 300/>
+
 Click on `Get a Copy of Your Data`
 
-<img src='data/get_data/4.png' width = 200>
----
+<img src='data/get_data/4.png' width = 300/>
+
 Check the Connections Checkbox and Download the Archive (You will get an emaim when it is avalible, generally takes 10-15 minutes)
 
-<img src='data/get_data/5.png' width = 200>
+<img src='data/get_data/5.png' width = 300/>
 
 Once you get the data in `Zip` file, head over to the [web app](https://share.streamlit.io/abhayparashar31/linkedin-connection-visualizer/main/app.py) and upload it!!!! 
 Enjoy Your Amazing Insights !!!!
