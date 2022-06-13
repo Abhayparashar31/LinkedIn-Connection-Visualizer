@@ -1,0 +1,116 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 650px;
+            height: 500px;
+            background-color: black;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#e6e6fa", "font": {"color": "white"}, "id": "You", "label": "You", "shape": "dot", "size": 10}, {"color": " #FF6F61", "font": {"color": "white"}, "id": "Data Scientist", "label": "Data Scientist", "shape": "dot", "size": 57, "title": "Data Scientist - 19\n "}, {"color": " #FF6F61", "font": {"color": "white"}, "id": "Software Engineer", "label": "Software Engineer", "shape": "dot", "size": 36, "title": "Software Engineer - 12\n "}, {"color": " #FF6F61", "font": {"color": "white"}, "id": "Founder", "label": "Founder", "shape": "dot", "size": 36, "title": "Founder - 12\n "}, {"color": " #FF6F61", "font": {"color": "white"}, "id": "Student", "label": "Student", "shape": "dot", "size": 27, "title": "Student - 9\n "}, {"color": " #FF6F61", "font": {"color": "white"}, "id": "Data Analyst", "label": "Data Analyst", "shape": "dot", "size": 21, "title": "Data Analyst - 7\n "}, {"color": " #FF6F61", "font": {"color": "white"}, "id": "Software Developer", "label": "Software Developer", "shape": "dot", "size": 18, "title": "Software Developer - 6\n "}, {"color": " #FF6F61", "font": {"color": "white"}, "id": "Data Science Intern", "label": "Data Science Intern", "shape": "dot", "size": 15, "title": "Data Science Intern - 5\n "}, {"color": " #FF6F61", "font": {"color": "white"}, "id": "Senior Software Engineer", "label": "Senior Software Engineer", "shape": "dot", "size": 12, "title": "Senior Software Engineer - 4\n "}, {"color": " #FF6F61", "font": {"color": "white"}, "id": "Founder \u0026 CEO", "label": "Founder \u0026 CEO", "shape": "dot", "size": 12, "title": "Founder \u0026 CEO - 4\n "}]);
+        edges = new vis.DataSet([{"color": "grey", "from": "You", "label": 1, "to": "Data Scientist", "weight": 1}, {"color": "grey", "from": "You", "label": 1, "to": "Software Engineer", "weight": 1}, {"color": "grey", "from": "You", "label": 1, "to": "Founder", "weight": 1}, {"color": "grey", "from": "You", "label": 1, "to": "Student", "weight": 1}, {"color": "grey", "from": "You", "label": 1, "to": "Data Analyst", "weight": 1}, {"color": "grey", "from": "You", "label": 1, "to": "Software Developer", "weight": 1}, {"color": "grey", "from": "You", "label": 1, "to": "Data Science Intern", "weight": 1}, {"color": "grey", "from": "You", "label": 1, "to": "Senior Software Engineer", "weight": 1}, {"color": "grey", "from": "You", "label": 1, "to": "Founder \u0026 CEO", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "repulsion": {
+            "centralGravity": 1.0,
+            "damping": 0.09,
+            "nodeDistance": 100,
+            "springConstant": 0.09,
+            "springLength": 200
+        },
+        "solver": "repulsion",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
