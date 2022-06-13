@@ -259,6 +259,7 @@ def gen_network(df,cutoff,col,colors):
         name_and_positions_lst = [' - '.join(words) for words in name_and_positions] 
         #context = "".join('{}\n'.format(x) for x in name_and_positions_lst)
         context = "".join('<li>{}<li>'.format(x) for x in name_and_positions_lst)
+        context = f"<ul>{context}</ul>"
         hover_info = title + context
         
         g.add_node(column, size=count * 3, title=hover_info, color=color_nodes)
