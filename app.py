@@ -89,8 +89,8 @@ def main():
         #### Network Graph
         st.sidebar.markdown("""#### Network Graph """)
         st.sidebar.markdown("""###### Cutoff Points For Connection Graph (the smaller it is the larger the network)""")
-        comcutoff = st.sidebar.slider('Company Network',2,50,5)
-        poscutoff = st.sidebar.slider('Position Network',2,50,5)
+        comcutoff = st.sidebar.slider('Company Network',2,50,3)
+        poscutoff = st.sidebar.slider('Position Network',2,50,4)
 
         #############################################
         ############### Headlines ###################
