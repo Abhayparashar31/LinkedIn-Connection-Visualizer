@@ -252,13 +252,13 @@ def gen_network(df,cutoff,col,colors):
         count = row['Count']
         
         ###### HOVER INFO #########
-        title = f"<b>{column}<b> - {count}<br>"
+        title = f"<b>{column}</b> - {count}<br>"
         position_lst = [x for x in df[df['Company']==f'{column}']['Position']]
         name = [x for x in df[df['Company']==f'{column}']['Name']]
         name_and_positions = list(zip(name,position_lst))
-        name_and_positions_lst = [' - '.join(words) for words in name_and_positions] 
+        name_and_positions_lst = [' - '.join(words) for words in name_and_positions]
         #context = "".join('{}\n'.format(x) for x in name_and_positions_lst)
-        context = "".join('<li>{}<li>'.format(x) for x in name_and_positions_lst)
+        context = "".join('<li>{}</li>'.format(x) for x in name_and_positions_lst)
         context = f"<ul>{context}</ul>"
         hover_info = title + context
         
