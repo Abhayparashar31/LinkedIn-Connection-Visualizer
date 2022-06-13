@@ -41,7 +41,7 @@ def main():
     st.caption(
         """
         Don't Know Where To Find?
-        [Click here](). Don't worry your data is in safe hands.
+        [Click here](https://github.com/Abhayparashar31/LinkedIn-Connection-Visualizer/blob/main/README.md#:~:text=How%20To%20Get%20Your%20Data%3F). Don't worry your data is in safe hands.
         """
     )
     
