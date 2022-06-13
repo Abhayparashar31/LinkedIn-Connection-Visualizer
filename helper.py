@@ -266,7 +266,7 @@ def gen_network(df,cutoff,col,colors):
 
     # generate the graph
     nt.from_nx(g)
-    nt.repulsion(node_distance=100, spring_length=200,central_gravity=1.0, spring_strength=0.09)
+    nt.repulsion(node_distance=100, spring_length=200)
     nt.toggle_stabilization(True)
 
     # Save and read graph as HTML file (on Streamlit Sharing)
