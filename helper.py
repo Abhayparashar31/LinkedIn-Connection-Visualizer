@@ -231,7 +231,7 @@ def plot_connections_overtime(df):
     return fig
 
 ###################################################
-######## GENERATE COMPANY NETWORK #################
+######## GENERATE NETWORK #########################
 ###################################################
 
 def gen_network(df,cutoff,col,colors):
