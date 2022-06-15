@@ -12,9 +12,9 @@ import streamlit.components.v1 as components
 import random
 
 
-####################################################
-####### Extracts Data From Uploaded Zip File #######
-####################################################
+#####################################################
+####### Extracts Data From Uploaded Zip File ########
+#####################################################
 def get_data(file):
     if file is not None:
         with ZipFile(file,"r") as zipobj:
@@ -27,9 +27,9 @@ def get_data(file):
 
         return df
     
-#####################################################
-########## Cleanes Data #############################
-#####################################################
+######################################################
+########## Cleanes Data ##############################
+######################################################
 
 def clean_data(df):
     ## Concatination First Name and Last Name as Name
