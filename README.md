@@ -45,7 +45,7 @@ Click on `Get a Copy of Your Data`
 
 <img src='data/get_data/4.png' width = 300/>
 
-Check the Connections Checkbox and Download the Archive (You will get an emaim when it is avalible, generally takes 10-15 minutes)
+Check the Connections Checkbox and Download the Archive (You will get an email when it is avalible, generally takes 10-15 minutes)
 
 <img src='data/get_data/5.png' width = 300/>
 
